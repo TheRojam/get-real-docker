@@ -1,0 +1,4 @@
+[submodule "get-real-src"]
+	path = get-real-src
+	url = git@github.com:TheRojam/get-real.git
+	branch = master
