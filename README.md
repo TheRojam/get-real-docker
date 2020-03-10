@@ -7,6 +7,9 @@ this repo contains a submodule w/ the meteor app code.
 - first clone the repo from github
 `$ git clone https://github.com/TheRojam/get-real-docker`
 
+- remember to initialize and update the submodule
+`$ git submodule init && git submodule update`
+
 - to build the docker from scratch  
 `$ docker build -t get-real/docker:latest .`
 
