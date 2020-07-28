@@ -7,5 +7,7 @@ services:
     ports:
       - 8080:3000
     volumes:
-      - get-real-src:/home/meteor/app
+      - 'get-real-src:/home/meteor/app'
 
+volumes:
+  get-real-src:
