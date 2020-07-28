@@ -1,6 +1,6 @@
 #LABEL maintainer="docker.getreal@therojam.tech"
 
-FROM inglebard/meteorjs:latest
+FROM inglebard/meteor:latest
 
 # ENV ROOT_URL=http://example.com
 # ENV MONGO_URL=mongodb://url
@@ -10,7 +10,6 @@ ENV appdir /home/meteor/app
 ENV settingsfile settings_production.json
 ENV runport 8080
 ENV appname get-real-app
-
 
 COPY --chown=meteor get-real-src/ /home/meteor/app
 
