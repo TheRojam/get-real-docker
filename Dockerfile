@@ -19,7 +19,7 @@ EXPOSE 8080:8080
 #RUN cd /home/meteor/app/ && sh GETREAL_launch.sh
 
 WORKDIR $appdir/
-RUN meteor create $appname
+RUN meteor run $appname
 
 WORKDIR $appdir/$appname/
 CMD meteor --port $runport --settings $appdir/$settingsfile 
