@@ -6,11 +6,10 @@ FROM inglebard/meteor:latest
 # ENV MONGO_URL=mongodb://url
 # ENV MONGO_OPLOG_URL=mongodb://oplog_url
 # ENV MAIL_URL=smtp://mail_url.com
-ENV appdir /home/meteor/app
-ENV settingsfile settings_production.json
-ENV runport 8080
-ENV appname get-real-app
-ENV MONGO_URL mongodb://meteor-db:27017/meteor-getreal 
+ARG appdir /home/meteor/app
+ARG settingsfile settings_production.json
+ARG runport 8080
+ARG appname get-real-app
 
 COPY --chown=meteor get-real-src/ /home/meteor/app
 
