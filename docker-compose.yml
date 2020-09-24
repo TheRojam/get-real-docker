@@ -1,6 +1,7 @@
 version: "3.7"
 services:
   meteor-server:
+    container_name: meteor-server
     build:
       context: .
       dockerfile: Dockerfile
@@ -8,8 +9,18 @@ services:
       - 8080:3000
     volumes:
       - 'get-real-src:/home/meteor/app'
+    enviroment:
+      - MONGO_URL=mongodb://meteor-db:27017/meteor-getreal 
   meteor-db:
+    container_name: meteor-db
     image: mongo:latest
+    ports:
+      - 27017:27017
+    volumes: 
+      - 'mongodb-data:/data/db/'
+    environment:
+      - MONGO_DATABASE=meteor-getreal
 
 volumes:
   get-real-src:
+  mongodb-data:
