@@ -10,6 +10,7 @@ ENV appdir /home/meteor/app
 ENV settingsfile settings_production.json
 ENV runport 8080
 ENV appname get-real-app
+ENV MONGO_URL mongodb://meteor-db:27017/meteor-getreal 
 
 COPY --chown=meteor get-real-src/ /home/meteor/app
 
