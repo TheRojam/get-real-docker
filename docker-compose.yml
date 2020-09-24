@@ -9,7 +9,7 @@ services:
       - 8080:3000
     volumes:
       - 'get-real-src:/home/meteor/app'
-    enviroment:
+    environment:
       - MONGO_URL=mongodb://meteor-db:27017/meteor-getreal 
   meteor-db:
     container_name: meteor-db
