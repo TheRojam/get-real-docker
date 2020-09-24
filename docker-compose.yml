@@ -1,6 +1,6 @@
 version: "3.7"
 services:
-  server:
+  meteor-server:
     build:
       context: .
       dockerfile: Dockerfile
@@ -8,6 +8,8 @@ services:
       - 8080:3000
     volumes:
       - 'get-real-src:/home/meteor/app'
+  meteor-db:
+    image: mongo:latest
 
 volumes:
   get-real-src:
